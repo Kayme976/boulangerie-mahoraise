@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Contact — Boulangerie Du Père</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- header -->
+<header class="site-header">
+<div class="container">
+<a class="brand" href="index.html">
+<div class="logo">BD</div>
+<div class="brand-text"><strong>Boulangerie Du Père</strong><span class="muted">Pain • Viennoiseries • Gâteaux</span></div>
+</a>
+<nav class="nav">
+<a href="index.html">Accueil</a>
+<a href="produits.html">Nos produits</a>
+<a href="commande.html">Commande</a>
+<a href="contact.html" class="active">Contact</a>
+<a href="horaires.html">Horaires</a>
+<button id="open-cart" class="btn small">Panier <span id="cart-count" class="cart-count">0</span></button>
+</nav>
+</div>
+</header>
+
+
+<main class="container">
+<h1>Contact</h1>
+<div class="columns">
+<div class="col">
+<p><strong>Adresse</strong><br>12 rue du Fournil, 75000 Paris</p>
+<p><strong>Téléphone</strong><br>06 12 34 56 78</p>
+<p><strong>Mail</strong><br>contact@boulangeriedupere.fr</p>
+</div>
+<div class="col">
+<h3>Envoyer un message</h3>
+<form onsubmit="event.preventDefault();sendContact();">
+<input id="msg-name" placeholder="Votre nom" required>
+<input id="msg-email" placeholder="Votre e-mail" required>
+<textarea id="msg-text" rows="4" placeholder="Votre message" required></textarea>
+<div style="margin-top:8px"><button class="btn" type="submit">Envoyer</button></div>
+</form>
+</div>
+</div>
+</main>
+
+
+<footer class="site-footer">
+<div class="container">
+<div>© Boulangerie Du Père</div>
+<div class="muted">Retrait en magasin — paiement sur place</div>
+</div>
+</footer>
+
+
+<script src="js/script.js"></script>
+</body>
+</html>
