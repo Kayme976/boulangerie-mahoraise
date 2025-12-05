@@ -1,47 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Nos produits — Boulangerie Du Père</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nos Produits - Boulangerie Mahoraise</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-<!-- header -->
-<header class="site-header">
-<div class="container">
-<a class="brand" href="index.html">
-<div class="logo">BD</div>
-<div class="brand-text"><strong>Boulangerie Du Père</strong><span class="muted">Pain • Viennoiseries • Gâteaux</span></div>
-</a>
-<nav class="nav">
-<a href="index.html">Accueil</a>
-<a href="produits.html" class="active">Nos produits</a>
-<a href="commande.html">Commande</a>
-<a href="contact.html">Contact</a>
-<a href="horaires.html">Horaires</a>
-<button id="open-cart" class="btn small">Panier <span id="cart-count" class="cart-count">0</span></button>
-</nav>
-</div>
+<body class="page-transition">
+
+<header>
+  <nav class="navbar">
+    <div class="logo">Boulangerie Mahoraise</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="produits.html">Nos produits</a></li>
+      <li><a href="commande.html">Commande</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="admin.html">Accès Pro</a></li>
+    </ul>
+  </nav>
 </header>
 
+<main>
+  <h1 class="page-title">Nos Produits</h1>
 
-<main class="container">
-<section>
-<h1>Nos produits</h1>
-<p class="muted">Clique sur « Ajouter » pour mettre un produit dans ton panier.</p>
-<div id="products-grid" class="grid"></div>
-</section>
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="images/baguette.jpg" class="product-img" alt="Baguette Tradition">
+      <h3>Baguette Tradition</h3>
+      <p>0,90 €</p>
+      <button class="btn-panier" onclick="addToCart('Baguette Tradition', 0.90)">Ajouter</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/croissant.jpg" class="product-img" alt="Croissant Beurre">
+      <h3>Croissant Beurre</h3>
+      <p>1,20 €</p>
+      <button class="btn-panier" onclick="addToCart('Croissant Beurre', 1.20)">Ajouter</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/pain-chocolat.jpg" class="product-img" alt="Pain chocolat">
+      <h3>Pain Chocolat</h3>
+      <p>1,30 €</p>
+      <button class="btn-panier" onclick="addToCart('Pain Chocolat', 1.30)">Ajouter</button>
+    </div>
+  </div>
 </main>
-
-
-<footer class="site-footer">
-<div class="container">
-<div>© Boulangerie Du Père</div>
-<div class="muted">Retrait en magasin — paiement sur place</div>
-</div>
-</footer>
-
 
 <script src="js/script.js"></script>
 </body>

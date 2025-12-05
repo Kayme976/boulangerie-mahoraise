@@ -1,63 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Commande — Boulangerie Du Père</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commande</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-<!-- header -->
-<header class="site-header">
-<div class="container">
-<a class="brand" href="index.html">
-<div class="logo">BD</div>
-<div class="brand-text"><strong>Boulangerie Du Père</strong><span class="muted">Pain • Viennoiseries • Gâteaux</span></div>
-</a>
-<nav class="nav">
-<a href="index.html">Accueil</a>
-<a href="produits.html">Nos produits</a>
-<a href="commande.html" class="active">Commande</a>
-<a href="contact.html">Contact</a>
-<a href="horaires.html">Horaires</a>
-<button id="open-cart" class="btn small">Panier <span id="cart-count" class="cart-count">0</span></button>
-</nav>
-</div>
+<body class="page-transition">
+
+<header>
+  <nav class="navbar">
+    <div class="logo">Boulangerie Mahoraise</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="produits.html">Nos produits</a></li>
+      <li><a href="commande.html">Commande</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="admin.html">Accès Pro</a></li>
+    </ul>
+  </nav>
 </header>
 
+<main>
+  <h1>Passer une commande</h1>
 
-<main class="container">
-<h1>Commande</h1>
-<div class="columns">
-<div class="col">
-<h3>Votre panier</h3>
-<div id="cart-list"></div>
-</div>
-<div class="col">
-<h3>Informations</h3>
-<form id="order-form" onsubmit="event.preventDefault();submitOrder();">
-<label>Nom complet<input required id="cust-name" placeholder="Ex: Jean Dupont"></label>
-<label>Téléphone<input required id="cust-phone" placeholder="06 12 34 56 78"></label>
-<label>Heure de retrait<input type="datetime-local" id="pickup-time" required></label>
-<label>Remarques<textarea id="cust-note" rows="3" placeholder="Allergies, précision..."></textarea></label>
-<div class="form-actions">
-<button class="btn" type="submit">Envoyer la commande</button>
-<button class="btn outline" type="button" onclick="clearCart()">Vider le panier</button>
-</div>
-<p class="muted">Aucun paiement en ligne — paiement au retrait.</p>
-</form>
-</div>
-</div>
+  <div class="form-container">
+    <label>Nom :</label>
+    <input type="text" id="cust-name">
+
+    <label>Téléphone :</label>
+    <input type="text" id="cust-phone">
+
+    <label>Heure de retrait :</label>
+    <input type="time" id="pickup-time">
+
+    <label>Note (optionnelle) :</label>
+    <textarea id="cust-note"></textarea>
+
+    <button onclick="sendOrder()" class="cta-btn">Envoyer la commande</button>
+  </div>
 </main>
-
-
-<footer class="site-footer">
-<div class="container">
-<div>© Boulangerie Du Père</div>
-<div class="muted">Retrait en magasin — paiement sur place</div>
-</div>
-</footer>
-
 
 <script src="js/script.js"></script>
 </body>
